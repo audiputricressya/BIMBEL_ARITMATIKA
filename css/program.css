@@ -1,0 +1,152 @@
+/* program.css — jenjang kelas, tipe kelas, dan daftar paket (bagian #program) */
+.program-card.is-active {
+  border-color: var(--green);
+  box-shadow: var(--shadow);
+}
+
+.pricing-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 34px;
+  margin-bottom: 14px;
+}
+.control-group > small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.segmented {
+  display: inline-flex;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 2px;
+}
+.segmented button {
+  border: 0;
+  background: transparent;
+  color: #53665d;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.segmented button:hover {
+  color: var(--green);
+}
+.segmented button.active {
+  background: var(--green);
+  color: white;
+}
+.type-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  max-width: 640px;
+  margin: 18px 0 34px;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 19px;
+}
+.price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid rgba(32, 53, 46, 0.06);
+  border-radius: var(--radius);
+  padding: 30px;
+  transition: 0.25s;
+  width: 100%;
+  max-width: 420px;
+  margin-inline: auto;
+}
+.price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+.price-card.popular {
+  border-color: var(--green);
+}
+.badge-popular {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: var(--yellow);
+  color: var(--green-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 5px 13px;
+  border-radius: 999px;
+}
+.price-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+.price-meta {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 18px;
+}
+.price {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+}
+.price small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+.price-card ul {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  flex: 1;
+}
+.price-card li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #46594f;
+}
+.price-card li:before {
+  content: "✓";
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--mint);
+  color: var(--green);
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+.price-card .btn {
+  width: 100%;
+}
+.price-note {
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+  .segmented button {
+    padding: 9px 16px;
+  }
+}

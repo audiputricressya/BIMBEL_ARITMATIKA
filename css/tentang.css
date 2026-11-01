@@ -1,0 +1,164 @@
+/* tentang.css — sejarah dan filosofi bimbel (bagian #tentang) */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-visual {
+  position: relative;
+  padding: 0 35px 35px 0;
+}
+.about-visual img {
+  height: 490px;
+  border-radius: 22px 22px 100px 22px;
+}
+.experience-card {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: var(--yellow);
+  border-radius: 18px;
+  padding: 20px 23px;
+  max-width: 200px;
+  box-shadow: var(--shadow);
+}
+.experience-card strong {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+}
+.experience-card span {
+  display: block;
+  font-size: 0.76rem;
+  margin-top: 8px;
+  font-weight: 600;
+}
+.about-copy h2 {
+  font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+  margin: 15px 0 20px;
+}
+.about-copy p {
+  color: var(--muted);
+}
+
+.timeline {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+}
+.timeline-item {
+  position: relative;
+  background: white;
+  border: 1px solid rgba(32, 53, 46, 0.05);
+  border-radius: var(--radius);
+  padding: 27px;
+}
+.timeline-item .year {
+  display: inline-block;
+  background: var(--mint);
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 13px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.timeline-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.timeline-item p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.values-copy h2 {
+  font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+  margin: 15px 0 18px;
+}
+.values-copy p {
+  color: var(--muted);
+}
+.value-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 28px;
+}
+.value-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.check {
+  flex: 0 0 27px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--mint);
+  color: var(--green);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.value-item strong {
+  display: block;
+  font-size: 0.88rem;
+}
+.value-item span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.values-image {
+  position: relative;
+}
+.values-image img {
+  height: 440px;
+  border-radius: 22px;
+}
+.values-image .quote-card {
+  position: absolute;
+  bottom: 22px;
+  left: -35px;
+  width: 75%;
+}
+
+@media (max-width: 900px) {
+  .about-grid,
+  .values-grid {
+    gap: 42px;
+  }
+}
+@media (max-width: 700px) {
+  .about-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-visual img {
+    height: 390px;
+  }
+  .timeline {
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+  .values-image img {
+    height: 350px;
+  }
+  .values-image .quote-card {
+    left: 10px;
+    width: 85%;
+  }
+  .value-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,83 @@
+/* owner.css — foto dan profil pemilik (bagian #owner) */
+.owner-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+  align-items: center;
+}
+.owner-visual {
+  position: relative;
+  padding: 0 0 35px 35px;
+}
+.owner-visual img {
+  height: 520px;
+  border-radius: 100px 22px 22px 22px;
+}
+.owner-badge {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--yellow);
+  border-radius: 18px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow);
+}
+.owner-badge strong {
+  display: block;
+  font-size: 1.9rem;
+  line-height: 1;
+}
+.owner-badge span {
+  display: block;
+  font-size: 0.76rem;
+  margin-top: 6px;
+  font-weight: 600;
+}
+.owner-copy h2 {
+  font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+  margin: 15px 0 6px;
+}
+.owner-role {
+  color: var(--green);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.owner-copy p {
+  color: var(--muted);
+}
+.owner-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 28px 0;
+}
+.owner-fact {
+  background: white;
+  border: 1px solid rgba(32, 53, 46, 0.06);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+.owner-fact strong {
+  display: block;
+  font-size: 0.95rem;
+}
+.owner-fact span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+@media (max-width: 900px) {
+  .owner-grid {
+    gap: 42px;
+  }
+}
+@media (max-width: 700px) {
+  .owner-grid {
+    grid-template-columns: 1fr;
+  }
+  .owner-visual img {
+    height: 400px;
+  }
+  .owner-facts {
+    grid-template-columns: 1fr;
+  }
+}
